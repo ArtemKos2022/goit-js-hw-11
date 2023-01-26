@@ -24,7 +24,7 @@ function onFormSubmit(event) {
   if (picturesApiService.query === '') {
     refs.galleryContainer.innerHTML = '';
     hideLoading();
-    return Notiflix.Notify.failure('Введите запрос в строку.');
+    return Notiflix.Notify.failure('Enter your query in the line.');
   }
   picturesApiService.resetPage();
   picturesApiService.getPictures().then(hits => {
